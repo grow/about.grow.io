@@ -10,6 +10,7 @@ body {
   background: #efefef;
   color: #312e2a;
   font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
+  font-size: 1.5em;
   font-weight: 200;
   margin: 0 auto;
   max-width: 780px;
@@ -35,5 +36,5 @@ p {
 }
 
 p.soon {
-  font-size: .9em;
+  font-size: .75em;
 }
