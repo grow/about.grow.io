@@ -38,3 +38,35 @@ p {
 p.soon {
   font-size: .75em;
 }
+
+form input {
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 3px;
+  width: 90%;
+}
+
+form input[type=email] {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+form input[type=email]:focus {
+  border-color: #8357AC;
+  outline: none;
+}
+
+form input[type=submit]:hover {
+  background: #9168B5;
+}
+
+form input[type=submit] {
+  background: #8357AC;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
+  padding: 10px 20px;
+  -webkit-transition: background 200ms;
+}
