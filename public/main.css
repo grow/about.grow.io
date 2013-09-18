@@ -7,7 +7,9 @@ a {
 }
 
 body {
-  background: #efefef;
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  background-color: #e8ebef;
+  background-repeat: no-repeat;
   color: #312e2a;
   font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
   font-size: 1.5em;
