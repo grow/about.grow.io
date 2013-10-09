@@ -1,0 +1,114 @@
+@import url('bootstrap.min.css');
+@import url(http://fonts.googleapis.com/css?family=Dosis:300,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
+
+a {
+  color: #8357AC;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  background-color: #e8ebef;
+  background-repeat: no-repeat;
+  color: #312e2a;
+  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+section.jumbo {
+  background: #097be8;
+  /* background: #242628 url('/public/images/cover.jpg') center center; */
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0 0 0;
+}
+
+section.jumbo .tagline {
+  font-size: 35px;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+section.jumbo img {
+  margin: 0 -200px;
+}
+
+section {
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  padding: 30px 0;
+}
+
+header {
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  padding: 20px 0;
+  text-align: left;
+}
+
+header a.banner {
+  color: #000;
+  text-decoration: none;
+}
+
+header .logo {
+  float: left;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+header .logo img {
+  height: 100%;
+  width: 100%;
+}
+
+header .title {
+  float: left;
+  line-height: 38px;
+  font-size: 28px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline;
+  font-size: 18px;
+  line-height: 40px;
+  margin-left: 20px;
+}
+
+.callouts .callout .image {
+  background: #ddd;
+  height: 80px;
+  margin: 0 auto 10px;
+  width: 80%;
+}
+
+.callouts .callout {
+  text-align: center;
+}
+
+.callouts .callout em {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+section h2 {
+  text-align: center;
+}
