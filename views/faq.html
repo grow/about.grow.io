@@ -1,0 +1,12 @@
+{% extends "/views/_base.html" %}
+
+{% block main %}
+  <section>
+    <div class="wrap">
+      {% for question in grow.content.questions %}
+        <h3>{{question.question}}</h3>
+        <p>{{question.answer}}
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

@@ -12,7 +12,6 @@ body {
   background-color: #e8ebef;
   background-repeat: no-repeat;
   color: #312e2a;
-  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
   font-size: 1.5em;
   font-weight: 200;
   margin: 0 auto;
@@ -36,13 +35,22 @@ section.jumbo {
 }
 
 section.jumbo .tagline {
+  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
   font-size: 35px;
-  margin: 0 0 40px;
+  margin: 0;
   padding: 0;
+}
+
+section.jumbo form {
+  margin: 30px 0 30px;
 }
 
 section.jumbo img {
   margin: 0 -200px;
+}
+
+section.jumbo input[type=email] {
+  width: 300px;
 }
 
 section {
@@ -51,8 +59,12 @@ section {
 }
 
 header {
+  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
   background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
   padding: 20px 0;
+  left: 0;
+  right: 0;
+  top: 0;
   text-align: left;
 }
 
@@ -63,6 +75,7 @@ header a.banner {
 
 header .logo {
   float: left;
+  color: #fff;
   height: 40px;
   margin-right: 10px;
   width: 40px;
@@ -111,4 +124,5 @@ header ul li {
 
 section h2 {
   text-align: center;
+  margin: 20px 0 50px;
 }

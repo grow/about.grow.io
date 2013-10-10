@@ -1,0 +1,43 @@
+{% extends "/views/_base.html" %}
+
+{% block main %}
+  <section class="jumbo">
+    <div class="wrap">
+      <div class="tagline">{{grow.content.tagline}}</div>
+
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email address">
+        </div>
+        <button type="submit" class="btn btn-default">Sign up for updates</button>
+      </form>
+
+      <img src="/public/images/coverscreen.png">
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <div class="callouts row">
+        {% for item in grow.content.callouts %}
+          <div class="col-md-2">
+            <div class="callout">
+              <div class="image"></div>
+              <em>{{item.title}}</em>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% for section in grow.content.sections %}
+  <section>
+    <div class="wrap">
+      <h2>{{section.title}}</h2>
+      {% if section.body %}
+        <p>{{section.body}}
+      {% endif %}
+      {% if section.html %}{{section.html|safe}}{% endif %}
+    </div>
+  </section>
+  {% endfor %}
+{% endblock %}
