@@ -1,0 +1,36 @@
+{% extends "/views/_base.html" %}
+
+{% block main %}
+<div class="wrap">
+  <div class="row">
+    <div class="col-md-2 sidenav">
+      {% for category in grow.nav(blueprint='docs')|groupby('category') %}
+        <div class="sidenav-title">{{category.0}}</div>
+        <ul>
+          {% for entry in category.1 %}
+          {% if entry.get_serving_path() == grow.content.get_serving_path() %}
+          <li class="active">
+          {% else %}
+          <li>
+          {% endif %}
+          <a href="{{entry.get_serving_path()}}">{{entry.title}}</a>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+    <div class="col-md-10">
+
+      <div class="body">
+        <h1>{{grow.content.title}}</h1>
+        {{grow.content.body|safe}}
+        <p class="well">
+          <a class="btn btn-primary" href="{{grow.content.get_prev().get_serving_path()}}">Back</a>
+          <a class="btn btn-primary" href="{{grow.content.get_next().get_serving_path()}}">Next</a>
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

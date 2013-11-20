@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Grow Blog</title>
+    <link>http://about.grow.io/</link>
+    <description>Grow is almost certainly the best way for teams to build and launch web sites, together.</description>
+    <language>en-us</language>
+    {% for entry in grow.entries(blueprint='posts') %}
+    <item>
+      <title>{{entry.title}}</title>
+      <link>http://about.grow.io{{entry.url}}</link>
+      <description><![CDATA[
+        {{entry.body|truncate(length=500)|safe}}
+      ]]></description>
+      <pubDate>{{entry.published}}</pubDate>
+      <guid>http://about.grow.io{{entry.url}}</guid>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

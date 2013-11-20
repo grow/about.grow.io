@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400);
 
 a {
-  color: #8357AC;
+  color: #097be8;
   text-decoration: none;
 }
 
@@ -12,8 +12,9 @@ body {
   background-color: #e8ebef;
   background-repeat: no-repeat;
   color: #312e2a;
+  font-family: 'Helvetica Neue', arial, sans-serif;
   font-size: 1.5em;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0 auto;
   padding: 0;
 }
@@ -26,12 +27,20 @@ body {
 }
 
 section.jumbo {
-  background: #097be8;
-  /* background: #242628 url('/public/images/cover.jpg') center center; */
-  background-size: cover;
+  background: #097be8 url('/public/images/pattern.png') bottom;
   color: #fff;
   text-align: center;
-  padding: 50px 0 0 0;
+  padding: 60px 0 80px 0;
+}
+
+section.jumbo a {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: underline;
+}
+
+section.jumbo .learnmore {
+  font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
+  color: rgba(0, 0, 0, 1);
 }
 
 section.jumbo .tagline {
@@ -46,16 +55,35 @@ section.jumbo form {
 }
 
 section.jumbo img {
-  margin: 0 -200px;
+  margin: 50px -200px 0;
+}
+
+@media (max-width: 800px) {
+  section.jumbo img {
+    margin: 15px 0 -15px;
+    width: 100%;
+  }
 }
 
 section.jumbo input[type=email] {
-  width: 300px;
+  min-width: 300px;
+}
+
+section.jumbo .btn-default {
+  color: #fff;
+  background-color: #097be8;
+  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
+  text-transform: uppercase;
 }
 
 section {
   background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
   padding: 30px 0;
+}
+
+section.invert {
+  background: #2d2d31;
+  color: #fff;
 }
 
 header {
@@ -66,6 +94,11 @@ header {
   right: 0;
   top: 0;
   text-align: left;
+  text-transform: uppercase;
+}
+
+footer {
+  padding: 20px 0;
 }
 
 header a.banner {
@@ -92,17 +125,30 @@ header .title {
   font-size: 28px;
 }
 
-header ul {
+header ul,
+footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-header ul li {
+header ul li,
+footer ul li {
   display: inline;
   font-size: 18px;
   line-height: 40px;
   margin-left: 20px;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+}
+
+footer ul li a {
+  font-family: 'Dosis', 'Helvetica Neue', arial, sans-serif;
+  color: #888;
+  font-size: 14px;
 }
 
 .callouts .callout .image {
@@ -114,15 +160,144 @@ header ul li {
 
 .callouts .callout {
   text-align: center;
+  font-size: 16px;
+  font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
 }
 
 .callouts .callout em {
-  font-size: 17px;
   font-style: normal;
   font-weight: bold;
 }
 
-section h2 {
+h1 {
+  font-weight: 200;
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 22px;
+  margin: 30px 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.sidenav-title {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #666;
+}
+
+.sidenav > ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.sidenav ul li.active a {
+  color: #333;
+}
+
+.body {
+  background: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2);
+}
+
+article {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+article .header em {
   text-align: center;
-  margin: 20px 0 50px;
+  font-style: normal;
+  color: #888;
+}
+
+article .header em a {
+  color: inherit;
+}
+
+article .header h1 {
+  margin-bottom: 20px;
+}
+
+article .header h1 a {
+  color: inherit;
+}
+
+article .header {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  margin: 40px 0 30px;
+}
+
+article q {
+  color: #097be8;
+  float: right;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 28px;
+  margin: 0px 0 15px 30px;
+  max-width: 200px;
+}
+
+article q.left {
+  margin: 0px 30px 15px 0;
+  float: left;
+}
+
+article .comments {
+  margin: 60px 0 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img.banner {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.main {
+  background: #fff;
+  padding: 60px 20px 80px;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 25px 0;
+}
+
+.body {
+  font-size: 17px;
+}
+
+.headshot {
+  box-shadow: 0 0 2px rgba(0,0,0,0.3),0 3px 5px rgba(0,0,0,0.2);
+  float: left;
+  margin: 14px 30px 20px 0;
+  width: 120px;
+}
+
+article cite {
+  font-size: 11px;
+  font-style: italic;
+  color: #666;
+  margin: 10px 0;
+}
+
+article cite a {
+  color: inherit;
 }

@@ -1,5 +1,5 @@
-title: FAQ – Grow
-view: /views/faq.html
+$title: FAQ – Grow
+$view: /views/faq.html
 questions:
 - question: How does development work? Is it local or in the cloud?
   answer: Grow works both

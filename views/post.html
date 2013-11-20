@@ -1,0 +1,36 @@
+{% extends "/views/_base.html" %}
+
+{% block main %}
+<div class="main">
+  <article>
+  <div class="header">
+      <h1><a href="{{g.content.url}}">{{g.content.title}}</a></h1>
+      <em>
+        by <a href="{{g.content.published_by_link}}">{{g.content.published_by}}</a>, {{g.content.published}}
+      </em>
+  </div>
+  {{g.content.html|safe}}
+
+  <div class="g-plusone" data-annotation="inline" style="max-width: 600px; overflow-x: hidden"></div>
+  <script>
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+
+  <div class="comments">
+    <script src="https://apis.google.com/js/plusone.js">
+    </script>
+    <div class="g-comments"
+        data-href="http://about.grow.io{{g.content.get_serving_path()}}"
+        data-width="642"
+        data-first_party_property="BLOGGER"
+        data-view_type="FILTERED_POSTMOD">
+    </div>
+  </div>
+
+  </article>
+</div>
+{% endblock %}

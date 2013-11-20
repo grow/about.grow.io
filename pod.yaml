@@ -2,3 +2,15 @@ grow_version: 0.0.1
 
 flags:
   public_dir: /public/
+
+routes:
+  - kind: page
+    path: /rss.xml
+    view: /views/rss.xml
+
+locales:
+  default:
+    languages:
+    - en
+    - ja
+    - pl

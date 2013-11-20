@@ -1,0 +1,21 @@
+{% extends "/views/_base.html" %}
+
+{% block main %}
+<div class="main">
+  <article>
+
+  {% for entry in g.entries('posts') %}
+    <div class="header">
+      <h1><a href="{{entry.url}}">{{entry.title}}</a></h1>
+      <em>
+        by <a href="{{entry.published_by_link}}">{{entry.published_by}}</a>, {{entry.published}}
+      </em>
+    </div>
+    {{entry.html|truncate(length=500)|safe}}
+    <p><a href="{{entry.url}}">Read more →</a></p>
+  {% endfor %}
+
+  </article>
+</div>
+{% endblock %}
+
